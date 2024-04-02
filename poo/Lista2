@@ -1,0 +1,26 @@
+Lista de Exercicios 2 de AED 
+1a) Programação orienteada a objetos é um tipo de programação que consiste na manipulação de classes, que nesse caso seriam os objetos, e manipular suas caracteísticas, publicas, privadas e protegidas.
+1b)uma classe é um bloco de programação na uqal é possivel manipular suas variaveis e seus metodos.
+1c)a instância de um objeto é um comportmento e/ou estado previamente definido pela classe.
+1d)om objeto é uma instãncia de classe ou struct.
+
+2)struct:
+    +Por padrão, todos os componentes de um struct são "+publicos". são de "livre acesso".
+    +Geralmente usado para agrupar elementos sem uma lógia associada diretamente a eles.
+Class:
+    +Por padrão, os componentes de uma classe são "-privados", ou seja precisam de getters e setters para se ter acesso aos dados.
+    +Usado quando se necessita de dados que precisam ser organizados, que tem uma ordem em específico e uma logia associada a eles.
+
+3)
+
+4) b)
+
+5) Herança é uma caracteristica adotada por objetos que permite-os herdar caracteristicas de outra classe, facilitando com a reutilização de código.
+
+Polimorfismo é um processo que permite que objetos de classes diferentes sejam tratados da mesma forma, permitindo execução de métodos especificos.
+
+6)Além de oferecer segurança e um certo grau de controle de acesso aos dados, devido aos modificadores de Visibilidade(+publico, -privado e #protegido), eles  oferecem uma modularidade ao código na qual é possivel identificar onde há possiveis problemas e facilita na organização.
+
+7)Tanto e getters e setters são usados em atributos privados de uma classe. Com o prefixo "get", o método fornece acesso a leitura de atributos. Já os setters, com prefixo "set" sãoutilizados para modificar o valor de um atributo privado de uma classe.
+
+8) A herança é um conceito que permite criar novas classes a partir de classes já existentes, fazendo assim a classe herdeira possa ter os mesmos atributos da classe "mãe". Processo que ajuda na reutilização de código.
