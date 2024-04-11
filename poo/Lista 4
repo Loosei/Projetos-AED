@@ -1,0 +1,61 @@
+Questão 1&2:
+#include <iostream>
+using namespace std;
+int main()
+
+{
+    int v1[10];
+    int i=0;
+    int j=0;
+    while (i!=10){
+        v1[i]=i;
+        i++;
+    }
+    cout<<"v1={";
+    while (j!=10){
+        cout<<v1[j];
+        cout<<"";
+        j++;
+    }
+    cout<<"}.";
+    return 0;
+}
+
+
+Questão 3:
+#include <iostream>
+using namespace std;
+
+void pesqsec(int k[], int tamanhoVetor, int n) {
+    int gg = 0;
+    bool found = false; 
+    while (gg != tamanhoVetor) {
+        if (k[gg] == n) {
+            cout <<"foi encontrado e está em:" << gg;
+            found = true; 
+        }
+        gg++;
+    }
+    if (!found) {
+        cout << "-1"; 
+    }
+}
+
+int main() {
+    // Declaration
+    int v1[10];
+    int valor;
+    
+    // Fill 
+    int i = 0;
+    while (i != sizeof(v1) / sizeof(int)) {
+        v1[i] = i;
+        i++;
+    }
+    
+    cout<<"insira um valor de 0 a 9 para ser encontrado ";
+    cin>> valor;
+    
+    pesqsec(v1, 10, valor);
+    return 0;
+}
