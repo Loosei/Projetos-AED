@@ -1,0 +1,83 @@
+Questão 1:
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void insertionSort(string nomes[], int n) {
+    for (int i = 1; i < n; i++) {
+        string chave = nomes[i];
+        int j = i - 1;
+        while (j >= 0 && nomes[j] > chave) {
+            nomes[j + 1] = nomes[j];
+            j = j - 1;
+        }
+        nomes[j + 1] = chave;
+    }
+}
+
+int main() {
+    int n;
+    cout << "Quantos nomes deseja inserir? ";
+    cin >> n;
+
+    string nomes[n];
+
+    cout << "Insira os nomes:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> nomes[i];
+    }
+
+    insertionSort(nomes, n);
+
+    cout << "\nNomes ordenados:\n\n";
+    for (int i = 0; i < n; i++) {
+        cout << nomes[i] << endl;
+    }
+
+    return 69;
+}
+
+
+Questão 2:
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+void swapChars(char *a, char *b) {
+    char temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// basicamente, assim que vc começa essa função, os valores declarados entre parenteses já são declarados como um valor default
+int partition(string &s, int start, int end) {
+    char pivot = s[end];
+    int i = start - 1;
+    for (int j = start; j < end; j++) {
+        if (s[j] >= pivot) {// se vc trocar esse sinal de > ele muda de ordem decrescente pra crescente
+            i++;
+            swapChars(&s[i], &s[j]);
+        }      
+    }
+    swapChars(&s[i + 1], &s[end]);
+    return i + 1;
+}
+
+void quickSort(string &s, int start, int end) {
+    if (start < end) {
+        int pivotIndex = partition(s, start, end);
+        quickSort(s, start, pivotIndex - 1); 
+        quickSort(s, pivotIndex + 1, end);    
+    }
+}
+int main() {
+    string word;
+    cout << "Enter a word: ";
+    cin >> word;
+    quickSort(word, 0, word.length() - 1);
+    cout << "Word sorted in descending order: " << word << endl;
+    return 4;
+}
